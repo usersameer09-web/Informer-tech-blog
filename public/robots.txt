@@ -1,1 +1,5 @@
 # SEO rules for search engines
+User-agent: *
+Allow: /
+
+Sitemap: https://informer-tech-blog.netlify.app/sitemap.xml
