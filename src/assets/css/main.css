@@ -1,1 +1,263 @@
 #Global styling for entire site
+/* Base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background: #f5f7fb;
+  color: #111827;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+.site-header {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.logo a {
+  color: #f9fafb;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.main-nav a {
+  color: #d1d5db;
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #ffffff;
+}
+
+/* Hero */
+.hero {
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 40px 0;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* Sections */
+.section {
+  padding: 32px 0;
+}
+
+.section-muted {
+  background: #e5e7eb;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.card a {
+  text-decoration: none;
+  color: #1d4ed8;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Post list */
+.post-list {
+  list-style: none;
+}
+
+.post-list li {
+  margin-bottom: 10px;
+}
+
+.post-list a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+}
+
+.post-list a:hover {
+  text-decoration: underline;
+}
+
+.post-meta {
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Page content */
+.page {
+  padding: 24px 0 40px;
+}
+
+.page h1 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.page h2 {
+  font-size: 1.2rem;
+  margin: 16px 0 8px;
+}
+
+.page p {
+  margin-bottom: 10px;
+}
+
+.page ul {
+  margin: 8px 0 12px 20px;
+}
+
+.page ul li {
+  margin-bottom: 6px;
+}
+
+/* Article/post */
+article {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+article h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+article h2 {
+  font-size: 1.2rem;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.post-meta-line {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.buy-button {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #1d4ed8;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.buy-button:hover {
+  background: #1e40af;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  background: #111827;
+  color: #9ca3af;
+  padding: 16px 0;
+  font-size: 0.85rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-small {
+  font-size: 0.78rem;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
